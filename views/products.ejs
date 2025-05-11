@@ -29,14 +29,14 @@
 
       <div class="products-container">
         <% allProducts.forEach(product => { %>
-            <div class="product-card">
+            <a href="/products/<%= product.id %>" class="product-card">
                 <img src="<%= product.image %>" alt="<%= product.name %>" />
                 <% if (product.stock < 20) { %>
                     <div class="ribbon">Low Stock!</div>
                 <% } %>
                 <h3><%= product.name %></h3>
                 <p class="price">₹<%= product.price %></p>
-            </div>
+            </a>
         <% }) %>
       </div>
     </div>

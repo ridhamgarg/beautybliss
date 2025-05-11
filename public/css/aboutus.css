@@ -58,6 +58,7 @@ body {
     margin-bottom: 1rem;
     max-width: 380px;
     max-height: 412px;
+    object-fit: fill;
 }
 
 .team-member h4 {
