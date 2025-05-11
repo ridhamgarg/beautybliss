@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup - Beautybliss</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include ('partials/header.ejs') %>
+
+    <main>
+        <section class="auth-container">
+            <div class="caption">
+                <h2>Beautybliss: Your Beauty, Our Passion</h2>
+            </div>
+            <div class="form-container">
+                <input type="radio" name="tab" id="login" checked>
+                <input type="radio" name="tab" id="signup">
+                <div class="tabs">
+                    <label for="login">Login</label>
+                    <label for="signup">Sign Up</label>
+                </div>
+
+                <div class="form-content">
+                    <form id="login-form">
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit">Login</button>
+                    </form>
+
+                    <form id="signup-form">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include ('partials/footer.ejs') %>
+</body>
+</html>
