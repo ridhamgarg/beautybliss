@@ -9,7 +9,7 @@
 </head>
 <body>
     
-    <%- include ('partials/header.ejs') %>
+    <%- include ('partials/header.ejs', {isUserLoggedIn}) %>
    
     <main>
         <section class="hero">
@@ -24,17 +24,17 @@
                 <div class="product">
                     <img src="https://ponds.in/cdn/shop/articles/324228854_890301995482157_6164375548560426159_n.jpg?v=1676985025" alt="Product 1">
                     <h4>Radiant Skin Serum</h4>
-                    <p>1500</p>
+                    <p>₹1500</p>
                 </div>
                 <div class="product">
                     <img src="https://m.media-amazon.com/images/I/61Qb+nmHD8L._AC_UF1000,1000_QL80_.jpg" alt="Product 2">
                     <h4>Velvet Matte Lipstick</h4>
-                    <p>1200</p>
+                    <p>₹1200</p>
                 </div>
                 <div class="product">
                     <img src="https://media.allure.com/photos/64ee2e8970fdd7d8de68cf95/16:9/w_1920%2Cc_limit/luxury_moisturizers_002.jpg" alt="Product 3">
                     <h4>Luxury Face Cream</h4>
-                    <p>4000</p>
+                    <p>₹4000</p>
                 </div>
             </div>
         </section>
@@ -55,5 +55,6 @@
     </main>
 
     <%- include ('partials/footer.ejs') %>
+   
 </body>
 </html>

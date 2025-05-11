@@ -126,5 +126,7 @@ input[type="radio"] {
 .form-content form button:hover {
     background-color: #ff809f;
 }
-
+.message{
+    margin-top: 16px;;
+}
 

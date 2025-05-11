@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautybliss - Cart</title>
+    <link rel="stylesheet" href="/css/cart.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body>
+    <%- include ('partials/header.ejs', {isUserLoggedIn}) %>
+
+    <div class="cart-container">
+        <h2>Your Shopping Cart</h2>
+        <div class="cart-items">
+           
+        </div>
+        <div class="cart-summary">
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+
+</body>
+</html>

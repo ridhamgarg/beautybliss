@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beautybliss - Product Details</title>
     <link rel="stylesheet" href="/css/detail.css">
-
 </head>
 <body>
-    <%- include ('partials/header.ejs') %>
+    <%- include ('partials/header.ejs', {isUserLoggedIn}) %>
 
     <div class="main-container">
         <div class="product-details">
@@ -25,5 +24,6 @@
     </div>
 
     <%- include ('partials/footer.ejs') %>
+    
 </body>
 </html>

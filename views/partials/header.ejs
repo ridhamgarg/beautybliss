@@ -1,15 +1,37 @@
 <link rel="stylesheet" href="/css/header.css">
-<header>
-    <div class="logo">
-        <h1>Beautybliss</h1>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/aboutus">About Us</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <a href="/">Beautybliss</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/aboutus">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <!-- <a href="/cart"><i data-feather="shopping-cart"></i>Cart</a> -->
+             <% if (!isUserLoggedIn) { %>
+                <a href="/login"><i data-feather="log-in"></i>Login</a>
+             <% } %>
+           
+             <% if (isUserLoggedIn) { %>
+                <a href="/orders"><i data-feather="truck"></i>Orders</a>
+                <a href="/cart"><i data-feather="shopping-cart"></i>Cart</a>
+                <a href="/logout"><i data-feather="log-out"></i>Logout</a>
+            <% } %>
+            
+            
+
+        </div>
+    </div>
+    
+</header>
+<script>
+    feather.replace();
+</script>
