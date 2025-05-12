@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautybliss - All Orders</title>
+    <link rel="stylesheet" href="/css/order.css">
+</head>
+<body>
+    <%- include('partials/header.ejs', isUserLoggedIn) %>
+
+    <div class="orders-container">
+        <h2>Your Orders</h2>
+
+        <% if (orders.length > 0) { %>
+            <div class="orders-list">
+                <% orders.forEach(order => { %>
+                    <div class="order-card">
+                        <img src="<%= order.product.image %>" alt="<%= order.product.name %>">
+                        <div class="order-details">
+                            <h3><%= order.product.name %></h3>
+                            <p>Price: ₹<%= order.product.price %></p>
+                            <p>Quantity: <%= order.quantity %></p>
+                            <p>Ordered On: <%= new Date(order.createdAt).toLocaleDateString() %></p>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        <% } else { %>
+            <p class="no-orders">You have no orders yet.</p>
+        <% } %>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

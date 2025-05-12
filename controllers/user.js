@@ -22,7 +22,7 @@ const logInUser = async (req, res) => {
     if (!findUser) {
         res.render("login", { message: "User not found or incorrect credentials" });
     }
-    const token = jwt.sign({ name:findUser.name, email:findUser.email }, 'beautybliss');
+    const token = jwt.sign({id:findUser.id, name:findUser.name, email:findUser.email }, 'beautybliss');
     res.cookie("token", token);
     res.redirect("/");
   };
