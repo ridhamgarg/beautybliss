@@ -8,9 +8,16 @@
 </head>
 <body>
     <%- include('partials/header.ejs', isUserLoggedIn) %>
+    
+    <div class="hero" style="background-image: url('/images/order-hero.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-overlay">
+            <h1>Your Orders</h1>
+            <p>Track and view your purchased products here.</p>
+        </div>
+    </div>
 
     <div class="orders-container">
-        <h2>Your Orders</h2>
+        <h2>Order History</h2>
 
         <% if (orders.length > 0) { %>
             <div class="orders-list">

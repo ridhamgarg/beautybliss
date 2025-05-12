@@ -12,6 +12,7 @@ const shopbycategoryRouter = require("./routes/shopbycategory");
 const userRouter = require("./routes/user");
 const cartRouter = require("./routes/cart");
 const orderRouter = require("./routes/order");
+const contactusRouter = require("./routes/contactus");
 
 mongoose
   .connect("mongodb://127.0.0.1:27017/beautybliss", {
@@ -39,6 +40,7 @@ app.use("/shopbycategory", shopbycategoryRouter);
 app.use("/user", userRouter);
 app.use("/cart", authorizeOnly, cartRouter);
 app.use("/order", authorizeOnly, orderRouter);
+app.use("/contactus", contactusRouter);
 
 app.get("/login", (req, res) => {
   res.render("login", { message: "" });

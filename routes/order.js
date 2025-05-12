@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const {processOrder} = require('../controllers/order');
+const {processOrder, getAllOrders} = require('../controllers/order');
 
-router.get('/', processOrder);
+router.get('/', getAllOrders);
+router.get('/process', processOrder);
 
 
 module.exports = router;
